@@ -40,52 +40,6 @@ body{
     cursor: pointer;
 }
 
-.weather{
-    display: none;
-}
-
-.error{
-    display: none;
-    color: red;
-}
-
-.details{
-    display: flex;
-    justify-content: space-between;
-}
-
-.col{
-    display: flex;
-    align-items: center;
-}
-
-.col img{
-    width: 30px;
-    margin-right: 10px;
-}
-
-@media screen and (max-width: 480px){
-    .container{
-        padding: 10px;
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .details{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .search input, #latitude, #longitude{
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .search button{
-        width: 100%;
-    }
-}
-
 .weather-icon{
     width: 170px;
     margin-top: 30px;
@@ -100,6 +54,14 @@ body{
     font-size: 45px;
     font-weight: 400;
     margin-top: -10px;
+}
+
+.sunriseAndSunset{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
 }
 
 .details{
@@ -136,4 +98,27 @@ body{
     font-size: 14px;
     margin-top: 10px;
     display: none;
+    color: red;
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        padding: 10px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .details{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search input, #latitude, #longitude{
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .search button{
+        width: 100%;
+    }
 }

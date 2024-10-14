@@ -25,6 +25,23 @@ async function checkWeather(query){
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + "Km/h";
+
+        const sunriseTime = new Date(data.sys.sunrise * 1000);
+        const sunsetTime = new Date(data.sys.sunset * 1000);
+        
+        const formatTime = (date) => {
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            return hours + ':' + minutes + ' ' + ampm;
+        };
+        
+        document.querySelector(".sunrise").innerHTML = formatTime(sunriseTime);
+        document.querySelector(".sunset").innerHTML = formatTime(sunsetTime);
+
         if (data.weather[0].main == "Clouds"){
             weatherIcon.src = "images/clouds.png";
         } else if (data.weather[0].main == "Clear"){
