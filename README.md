@@ -53,3 +53,7 @@ This is a simple weather application that allows users to check the current weat
 - **CSS**: For styling the weather app.
 - **JavaScript (ES6)**: For making API calls and updating the UI dynamically.
 - **OpenWeatherMap API**: To fetch real-time weather data.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
