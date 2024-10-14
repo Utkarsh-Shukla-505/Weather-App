@@ -1,4 +1,4 @@
-const apiKey = "YOUR_API_KEY";  // Your weatherAPI Api key goes here
+const apiKey = "e38697015d906969502b7b177364fa29";  // Your weatherAPI Api key goes here
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&";
 
 const searchBox = document.querySelector(".search input");
@@ -44,14 +44,22 @@ async function checkWeather(query){
 
         if (data.weather[0].main == "Clouds"){
             weatherIcon.src = "images/clouds.png";
+            document.querySelector(".container").style.background = "linear-gradient(135deg, #f1f6f5, #79787d)";
         } else if (data.weather[0].main == "Clear"){
             weatherIcon.src = "images/clear.png";
+            document.querySelector(".container").style.background = "linear-gradient(135deg, #259eb0, #d49f56)";
         } else if (data.weather[0].main == "Rain"){
             weatherIcon.src = "images/rain.png";
+            document.querySelector(".container").style.background = "linear-gradient(135deg, #4092d0, #89898c)";
         } else if (data.weather[0].main == "Drizzle"){
             weatherIcon.src = "images/drizzle.png";
+            document.querySelector(".container").style.background = "linear-gradient(135deg, #f1f6f5, #79787d)";
         } else if (data.weather[0].main == "Mist"){
             weatherIcon.src = "images/mist.png";
+            document.querySelector(".container").style.background = "linear-gradient(135deg, #dcdad8, #d9dddd)";
+        } else if (data.weather[0].main == "Snow"){
+            weatherIcon.src = "images/snow.png";
+            document.querySelector(".container").style.background = "linear-gradient(135deg, #ffffff, #cdcdcd)";
         }
 
         document.querySelector(".weather").style.display = "block";
