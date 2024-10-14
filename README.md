@@ -22,14 +22,17 @@ This is a simple weather application that allows users to check the current weat
   - `mist.png`: Icon for misty weather.
   - `humidity.png`: Icon representing humidity.
   - `wind.png`: Icon representing wind speed.
+  - `sunrise.png`: Icon representing sunrise.
+  - `sunset.png`: Icon representing wind sunset.
 
 ## How to Use
 
 1. Clone or download the repository.
 2. Open `index.html` in any modern web browser.
 3. Enter the name of the city you wish to check the weather for in the input field.
-4. Click the search button to get weather details.
-5. The app will display temperature, humidity, wind speed, and weather condition using appropriate icons.
+4. Alternatively you can enter latitude and longitude to check the weather.
+5. Click the search button to get weather details.
+6. The app will display temperature, sunrise and sunset timing, humidity, wind speed, and weather condition using appropriate icons.
 
 ## Setup Instructions
 
